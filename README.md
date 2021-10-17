@@ -23,3 +23,30 @@ Librería | Versión
 ```
 REACT_APP_STRIPE_KEY
 ```
+
+
+
+## FAQs
+
+¿Qué es una desestructuración de arreglos?
+
+```javascript
+const lista = [
+  "hamburguesa", 
+  "pizza", 
+  "coca light", 
+  () => {
+    return 5
+  }
+]
+
+const [primerComida, segundaComida, terceraComida, postre] = lista
+
+console.log(primerComida)
+console.log(segundaComida)
+console.log(terceraComida)
+console.log(postre)
+
+postre()
+```
+
