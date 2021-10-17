@@ -1,5 +1,17 @@
-import logo from './logo.svg';
+// 1. IMPORTACIONES
 import './App.css';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom'
+
+import Home from './components/Home';
+import AboutUs from './components/AboutUs';
+
+
+// 2. COMPONENTE PRINCIPAL / RUTAS FRONTEND
 
 function App() {
   return (
@@ -9,7 +21,14 @@ function App() {
      */
     // FORMATO JSX
     <>
-      <div>hola</div> 
+        <Router>
+          <Switch>
+            <Route exact path="/sobre-nosotros" component={AboutUs}  />
+            <Route exact path="/" component={Home} />
+          </Switch>
+        </Router>
+
+
     </>
     
   );
